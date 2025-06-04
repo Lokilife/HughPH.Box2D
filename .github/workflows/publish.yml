@@ -242,9 +242,6 @@ jobs:
         name: Test C# bindings
         needs: [ detect-tag, build-box2d-linux-x64 ]
         runs-on: [self-hosted, Linux, X64]
-        permissions:
-            id-token: write
-            pages: write
         steps:
             -   id: purge
                 run: |
@@ -289,6 +286,9 @@ jobs:
         needs: [ run-tests ]
         if: github.ref == 'refs/heads/main'
         runs-on: [self-hosted, Linux, X64]
+        permissions:
+            id-token: write
+            pages: write
         steps:
             -   id: purge
                 run: |
