@@ -4,7 +4,7 @@ namespace Box2D
 {
     partial struct Capsule
     {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<in Capsule, float, MassData> ComputeCapsuleMass;
     private static readonly unsafe delegate* unmanaged[Cdecl]<in Capsule, Transform, AABB> ComputeCapsuleAABB;
     private static readonly unsafe delegate* unmanaged[Cdecl]<Vec2, in Capsule, byte> PointInCapsule;

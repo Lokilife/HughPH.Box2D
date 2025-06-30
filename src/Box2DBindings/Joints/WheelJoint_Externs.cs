@@ -4,7 +4,7 @@ namespace Box2D
 {
     public partial class WheelJoint
     {
-        #if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, byte, void> b2WheelJoint_EnableSpring;
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, byte> b2WheelJoint_IsSpringEnabled;
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, float, void> b2WheelJoint_SetSpringHertz;

@@ -4,7 +4,7 @@ namespace Box2D
 {
     partial class PrismaticJoint
     {
-        #if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, byte, void> b2PrismaticJoint_EnableSpring;
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, byte> b2PrismaticJoint_IsSpringEnabled;
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, float, void> b2PrismaticJoint_SetSpringHertz;

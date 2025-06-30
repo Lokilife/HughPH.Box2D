@@ -4,7 +4,7 @@ namespace Box2D
 {
     public partial class MouseJoint
     {
-        #if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, Vec2, void> b2MouseJoint_SetTarget;
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, Vec2> b2MouseJoint_GetTarget;
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, float, void> b2MouseJoint_SetSpringHertz;

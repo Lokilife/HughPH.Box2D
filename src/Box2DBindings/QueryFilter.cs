@@ -12,7 +12,7 @@ namespace Box2D;
 [PublicAPI]
 public ref struct QueryFilter
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<QueryFilter> b2DefaultQueryFilter;
 
     static unsafe QueryFilter()

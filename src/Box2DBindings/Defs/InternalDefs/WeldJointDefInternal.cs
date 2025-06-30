@@ -6,7 +6,7 @@ namespace Box2D;
 [StructLayout(LayoutKind.Explicit)]
 struct WeldJointDefInternal
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<WeldJointDefInternal> b2DefaultWeldJointDef;
 
     static unsafe WeldJointDefInternal()

@@ -4,7 +4,7 @@ namespace Box2D
 {
     partial class ChainShape
     {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<ChainShapeId, void> b2DestroyChain;
     private static readonly unsafe delegate* unmanaged[Cdecl]<ChainShapeId, WorldId> b2Chain_GetWorld;
     private static readonly unsafe delegate* unmanaged[Cdecl]<ChainShapeId, int> b2Chain_GetSegmentCount;

@@ -6,7 +6,7 @@ namespace Box2D;
 [StructLayout(LayoutKind.Sequential)]
 unsafe struct ChainDefInternal
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static delegate* unmanaged[Cdecl]<ChainDefInternal> b2DefaultChainDef;
 
     static ChainDefInternal()

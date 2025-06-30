@@ -4,7 +4,7 @@ namespace Box2D
 {
     partial struct Segment
     {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<in Segment, Transform, AABB> b2ComputeSegmentAABB;
     private static readonly unsafe delegate* unmanaged[Cdecl]<in RayCastInput, in Segment, byte, CastOutput> b2RayCastSegment;
     private static readonly unsafe delegate* unmanaged[Cdecl]<in ShapeCastInput, in Segment, CastOutput> b2ShapeCastSegment;

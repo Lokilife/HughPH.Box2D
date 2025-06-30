@@ -4,7 +4,7 @@ namespace Box2D
 {
     partial class MotorJoint
     {
-        #if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, Vec2, void> b2MotorJoint_SetLinearOffset;
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, Vec2> b2MotorJoint_GetLinearOffset;
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, float, void> b2MotorJoint_SetAngularOffset;

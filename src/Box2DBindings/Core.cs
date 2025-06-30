@@ -170,7 +170,7 @@ public static partial class Core
     }
 
     
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     internal static unsafe object? GetObjectAtPointer<T>(delegate* unmanaged[Cdecl]<T, nint> getFunc, T param) where T : unmanaged
     {
         return GetObjectAtPointer(getFunc(param));

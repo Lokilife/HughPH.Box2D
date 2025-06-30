@@ -10,7 +10,7 @@ namespace Box2D;
 [StructLayout(LayoutKind.Explicit)]
 struct DebugDrawInternal
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     public static unsafe delegate* unmanaged[Cdecl]<DebugDrawInternal> b2DefaultDebugDraw;
 
     static unsafe DebugDrawInternal()

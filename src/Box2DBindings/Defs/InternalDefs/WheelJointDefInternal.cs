@@ -6,7 +6,7 @@ namespace Box2D;
 [StructLayout(LayoutKind.Explicit)]
 struct WheelJointDefInternal
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<WheelJointDefInternal> b2DefaultWheelJointDef;
 
     static unsafe WheelJointDefInternal()

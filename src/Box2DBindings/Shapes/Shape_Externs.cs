@@ -5,7 +5,7 @@ namespace Box2D
 {
     partial struct Shape
     {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
         private static readonly unsafe delegate* unmanaged[Cdecl]<Shape, byte, void> b2DestroyShape;
         private static readonly unsafe delegate* unmanaged[Cdecl]<Shape, byte> b2Shape_IsValid;
         private static readonly unsafe delegate* unmanaged[Cdecl]<Shape, ShapeType> b2Shape_GetType;

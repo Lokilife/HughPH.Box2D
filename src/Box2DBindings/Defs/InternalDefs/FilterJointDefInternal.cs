@@ -6,7 +6,7 @@ namespace Box2D;
 [StructLayout(LayoutKind.Sequential)]
 struct FilterJointDefInternal
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static unsafe delegate* unmanaged[Cdecl]<FilterJointDefInternal> b2DefaultNullJointDef;
 
     static unsafe FilterJointDefInternal()

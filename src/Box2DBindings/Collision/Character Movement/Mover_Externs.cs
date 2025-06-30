@@ -4,7 +4,7 @@ namespace Box2D.Character_Movement;
 
 static partial class Mover
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<Vec2, CollisionPlane[], int, PlaneSolverResult> b2SolvePlanes;
     private static readonly unsafe delegate* unmanaged[Cdecl]<Vec2, CollisionPlane[], int, Vec2> b2ClipVector;
         

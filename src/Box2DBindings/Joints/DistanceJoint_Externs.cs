@@ -4,7 +4,7 @@ namespace Box2D;
 
 partial class DistanceJoint
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, float, void> b2DistanceJoint_SetLength;
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, float> b2DistanceJoint_GetLength;
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, byte, void> b2DistanceJoint_EnableSpring;

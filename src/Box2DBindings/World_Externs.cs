@@ -4,7 +4,7 @@ namespace Box2D;
 
 partial class World
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static unsafe delegate* unmanaged[Cdecl]<WorldId, byte> b2World_IsValid;
     private static unsafe delegate* unmanaged[Cdecl]<WorldId, float, int, void> b2World_Step;
     private static unsafe delegate* unmanaged[Cdecl]<WorldId, in DebugDrawInternal, void> b2World_Draw_;

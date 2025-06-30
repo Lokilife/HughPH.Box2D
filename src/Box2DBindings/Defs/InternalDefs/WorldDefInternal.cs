@@ -6,7 +6,7 @@ namespace Box2D;
 [StructLayout(LayoutKind.Explicit)]
 struct WorldDefInternal
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<WorldDefInternal> b2DefaultWorldDef;
 
     static unsafe WorldDefInternal()

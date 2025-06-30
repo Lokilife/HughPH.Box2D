@@ -4,7 +4,7 @@ namespace Box2D
 {
     partial struct Polygon
     {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
         private static readonly unsafe delegate* unmanaged[Cdecl]<in Hull, float, Polygon> MakePolygon_;
         private static readonly unsafe delegate* unmanaged[Cdecl]<in Hull, Vec2, Rotation, Polygon> MakeOffsetPolygon_;
         private static readonly unsafe delegate* unmanaged[Cdecl]<in Hull, Vec2, Rotation, float, Polygon> MakeOffsetRoundedPolygon_;

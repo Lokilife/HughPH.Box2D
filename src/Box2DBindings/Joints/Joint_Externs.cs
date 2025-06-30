@@ -4,7 +4,7 @@ namespace Box2D
 {
     partial class Joint
     {
-        #if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, void> b2DestroyJoint;
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, byte> b2Joint_IsValid;
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, JointType> b2Joint_GetType;

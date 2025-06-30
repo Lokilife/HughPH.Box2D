@@ -9,7 +9,7 @@ namespace Box2D;
 [PublicAPI]
 public static class Stats
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<int> b2GetByteCount;
 
     static unsafe Stats()

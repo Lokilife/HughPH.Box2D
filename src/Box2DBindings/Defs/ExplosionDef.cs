@@ -11,7 +11,7 @@ namespace Box2D;
 [PublicAPI]
 public struct ExplosionDef
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<ExplosionDef> b2DefaultExplosionDef;
 
     static unsafe ExplosionDef()

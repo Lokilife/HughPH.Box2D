@@ -5,7 +5,7 @@ namespace Box2D;
 
 partial struct AABB
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<AABB, byte> b2IsValidAABB;
 
     static unsafe AABB()

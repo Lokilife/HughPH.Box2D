@@ -4,7 +4,7 @@ namespace Box2D
 {
     partial struct Body
     {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
         private static readonly unsafe delegate* unmanaged[Cdecl]<Body, void> b2DestroyBody;
         private static readonly unsafe delegate* unmanaged[Cdecl]<Body, byte> b2Body_IsValid;
         private static readonly unsafe delegate* unmanaged[Cdecl]<Body, BodyType> b2Body_GetType;

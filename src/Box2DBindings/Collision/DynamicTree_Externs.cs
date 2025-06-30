@@ -5,7 +5,7 @@ namespace Box2D;
 
 unsafe partial struct DynamicTree
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     /// <summary>
     /// Constructing the tree initializes the node pool.
     /// </summary>

@@ -10,7 +10,7 @@ namespace Box2D;
 [PublicAPI]
 public struct RayCastInput
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<in RayCastInput, byte> b2IsValidRay;
 
     static unsafe RayCastInput()

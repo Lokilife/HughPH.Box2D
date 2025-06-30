@@ -6,7 +6,7 @@ namespace Box2D;
 [StructLayout(LayoutKind.Explicit, Size = 80)]
 struct ShapeDefInternal
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<ShapeDefInternal> b2DefaultShapeDef;
 
     static unsafe ShapeDefInternal()

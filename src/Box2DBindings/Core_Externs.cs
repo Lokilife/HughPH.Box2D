@@ -7,7 +7,7 @@ namespace Box2D
 {
     partial class Core
     {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
         /// <summary>
         /// Get the current version of Box2D
         /// </summary>

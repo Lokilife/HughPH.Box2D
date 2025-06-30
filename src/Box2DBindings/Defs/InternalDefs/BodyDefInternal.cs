@@ -6,7 +6,7 @@ namespace Box2D;
 [StructLayout(LayoutKind.Sequential)] // The alternative to LayoutKind.Explicit is to have two padding bytes between AllowFastRotation and internalValue
 struct BodyDefInternal
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<BodyDefInternal> b2DefaultBodyDef;
 
     static unsafe BodyDefInternal()

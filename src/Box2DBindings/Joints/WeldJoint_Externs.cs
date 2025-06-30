@@ -4,7 +4,7 @@ namespace Box2D
 {
     public partial class WeldJoint
     {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, float, void> b2WeldJoint_SetLinearHertz;
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, float> b2WeldJoint_GetLinearHertz;
     private static readonly unsafe delegate* unmanaged[Cdecl]<JointId, float, void> b2WeldJoint_SetLinearDampingRatio;

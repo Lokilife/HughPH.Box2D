@@ -5,7 +5,7 @@ namespace Box2D.Character_Movement;
 
 partial struct Plane
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<Plane, byte> b2IsValidPlane;
 
     static unsafe Plane()

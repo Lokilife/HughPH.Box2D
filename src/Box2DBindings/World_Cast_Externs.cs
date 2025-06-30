@@ -4,7 +4,7 @@ namespace Box2D;
 
 partial class World
 {
-    #if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<WorldId, Vec2, Vec2, QueryFilter, RayResult> b2World_CastRayClosest;
     private static readonly unsafe delegate* unmanaged[Cdecl]<WorldId, Vec2, Vec2, QueryFilter, nint, nint, TreeStats> b2World_CastRay_;
     private static readonly unsafe delegate* unmanaged[Cdecl]<WorldId, in ShapeProxy, Vec2, QueryFilter, nint, nint, TreeStats> b2World_CastShape_;

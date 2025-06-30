@@ -5,7 +5,7 @@ namespace Box2D;
 
 partial struct Rotation
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<Rotation, byte> b2IsValidRotation;
 
     static unsafe Rotation()

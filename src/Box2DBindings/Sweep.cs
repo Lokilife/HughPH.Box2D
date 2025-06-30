@@ -12,7 +12,7 @@ namespace Box2D;
 [PublicAPI]
 public struct Sweep
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<in Sweep, float, Transform> b2GetSweepTransform;
 
     static unsafe Sweep()

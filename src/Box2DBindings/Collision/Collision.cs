@@ -10,7 +10,7 @@ namespace Box2D;
 [PublicAPI]
 public static class Collision
 {
-#if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     /// <summary>
     /// Compute the contact manifold between two circles
     /// </summary>

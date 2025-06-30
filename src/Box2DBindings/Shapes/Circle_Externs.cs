@@ -4,7 +4,7 @@ namespace Box2D
 {
     public partial struct Circle
     {
-        #if NET5_0_OR_GREATER
+#if NET9_0_OR_GREATER
     private static readonly unsafe delegate* unmanaged[Cdecl]<in Circle, float, MassData> b2ComputeCircleMass;
     private static readonly unsafe delegate* unmanaged[Cdecl]<in Circle, in Transform, AABB> b2ComputeCircleAABB;
     private static readonly unsafe delegate* unmanaged[Cdecl]<in Vec2, in Circle, byte> b2PointInCircle;
