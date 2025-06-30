@@ -171,12 +171,12 @@ public static partial class Core
 
     
 #if NET5_0_OR_GREATER
-    internal static unsafe object? GetObjectAtPointer<T>(delegate* unmanaged[Cdecl]<T, nint> getFunc, T param)
+    internal static unsafe object? GetObjectAtPointer<T>(delegate* unmanaged[Cdecl]<T, nint> getFunc, T param) where T : unmanaged
     {
         return GetObjectAtPointer(getFunc(param));
     }
     
-    internal static unsafe void SetObjectAtPointer<T>(delegate* unmanaged[Cdecl]<T, nint> getFunc, delegate* unmanaged[Cdecl]<T, nint, void> setFunc, T param, object? value)
+    internal static unsafe void SetObjectAtPointer<T>(delegate* unmanaged[Cdecl]<T, nint> getFunc, delegate* unmanaged[Cdecl]<T, nint, void> setFunc, T param, object? value) where T : unmanaged
     {
         // dealloc previous user data
         nint userDataPtr = getFunc(param);
@@ -197,12 +197,12 @@ public static partial class Core
     }
 
 #else
-    internal static object? GetObjectAtPointer<T>(Func<T, nint> getFunc, T param)
+    internal static object? GetObjectAtPointer<T>(Func<T, nint> getFunc, T param) where T : unmanaged
     {
         return GetObjectAtPointer(getFunc(param));
     }
 
-    internal static void SetObjectAtPointer<T>(Func<T, nint> getFunc, Action<T, nint> setFunc, T param, object? value)
+    internal static void SetObjectAtPointer<T>(Func<T, nint> getFunc, Action<T, nint> setFunc, T param, object? value) where T : unmanaged
     {
         // dealloc previous user data
         nint userDataPtr = getFunc(param);
