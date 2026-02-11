@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 namespace Box2D;
 
 //! \internal
-[StructLayout(LayoutKind.Explicit, Size = 80)]
+[StructLayout(LayoutKind.Explicit, Size = 88)]
 struct ShapeDefInternal
 {
 #if NET9_0_OR_GREATER
@@ -26,34 +26,37 @@ struct ShapeDefInternal
     [FieldOffset( 8)]
     internal SurfaceMaterial Material;
     
-    [FieldOffset(32)]
+    [FieldOffset(40)]
     internal float Density;
 
-    [FieldOffset(40)]
-    internal Filter Filter; // 20 bytes
+    [FieldOffset(48)]
+    internal Filter Filter; // 24 bytes (padded)
     
-    [FieldOffset(64)]
+    [FieldOffset(72)]
+    internal byte EnableCustomFiltering;
+
+    [FieldOffset(73)]
     internal byte IsSensor;
 
-    [FieldOffset(65)]
+    [FieldOffset(74)]
     internal byte EnableSensorEvents;
     
-    [FieldOffset(66)]
+    [FieldOffset(75)]
     internal byte EnableContactEvents;
 
-    [FieldOffset(67)]
+    [FieldOffset(76)]
     internal byte EnableHitEvents;
 
-    [FieldOffset(68)]
+    [FieldOffset(77)]
     internal byte EnablePreSolveEvents;
 
-    [FieldOffset(69)]
+    [FieldOffset(78)]
     internal byte InvokeContactCreation;
 
-    [FieldOffset(70)]
+    [FieldOffset(79)]
     internal byte UpdateBodyMass;
 
-    [FieldOffset(72)]
+    [FieldOffset(80)]
     internal readonly int internalValue;
     
     private static unsafe ShapeDefInternal Default => b2DefaultShapeDef();

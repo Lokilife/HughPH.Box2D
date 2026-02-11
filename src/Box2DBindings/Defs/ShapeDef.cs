@@ -38,6 +38,15 @@ public sealed class ShapeDef
     public ref Filter Filter => ref _internal.Filter;
 
     /// <summary>
+    /// Enable custom filtering.
+    /// </summary>
+    public bool EnableCustomFiltering
+    {
+        get => _internal.EnableCustomFiltering != 0;
+        set => _internal.EnableCustomFiltering = value ? (byte)1 : (byte)0;
+    }
+
+    /// <summary>
     /// A sensor shape generates overlap events but never generates a collision response.
     /// Sensors do not have continuous collision. Instead, use a ray or shape cast for those scenarios.
     /// <i>Note: Sensor events are disabled by default.</i>
@@ -112,6 +121,7 @@ public sealed class ShapeDef
     /// <param name="material">The surface material for this shape.</param>
     /// <param name="density">The density, usually in kg/m².</param>
     /// <param name="filter">Collision filtering data.</param>
+    /// <param name="enableCustomFiltering">Enable custom filtering.</param>
     /// <param name="isSensor">A sensor shape generates overlap events but never generates a collision response. Sensors do not have continuous collision. Instead, use a ray or shape cast for those scenarios. <i>Note: Sensor events are disabled by default.</i></param>
     /// <param name="enableSensorEvents">Enable sensor events for this shape. This applies to sensors and non-sensors. False by default, even for sensors.</param>
     /// <param name="enableContactEvents">Enable contact events for this shape. Only applies to kinematic and dynamic bodies. Ignored for sensors. False by default.</param>
@@ -124,6 +134,7 @@ public sealed class ShapeDef
         SurfaceMaterial material,
         float density,
         Filter filter,
+        bool enableCustomFiltering = false,
         bool isSensor = false,
         bool enableSensorEvents = false,
         bool enableContactEvents = false,
@@ -136,6 +147,7 @@ public sealed class ShapeDef
         _internal.Material = material;
         _internal.Density = density;
         _internal.Filter = filter;
+        EnableCustomFiltering = enableCustomFiltering;
         IsSensor = isSensor;
         EnableSensorEvents = enableSensorEvents;
         EnableContactEvents = enableContactEvents;

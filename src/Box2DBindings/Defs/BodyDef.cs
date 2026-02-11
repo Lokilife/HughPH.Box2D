@@ -112,6 +112,12 @@ public sealed class BodyDef
     }
 
     /// <summary>
+    /// Motions locks to restrict linear and angular movement.
+    /// Caution: may lead to softer constraints along the locked direction.
+    /// </summary>
+    public ref MotionLocks MotionLocks => ref _internal.MotionLocks;
+
+    /// <summary>
     /// Set this flag to false if this body should never fall asleep.
     /// </summary>
     public bool EnableSleep
@@ -134,8 +140,8 @@ public sealed class BodyDef
     /// </summary>
     public bool FixedRotation
     {
-        get => _internal.FixedRotation != 0;
-        set => _internal.FixedRotation = value ? (byte)1 : (byte)0;
+        get => _internal.MotionLocks.AngularZ != 0;
+        set => _internal.MotionLocks.AngularZ = value ? (byte)1 : (byte)0;
     }
 
     /// <summary>

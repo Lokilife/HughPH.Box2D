@@ -49,7 +49,7 @@ public struct SurfaceMaterial
     /// User material identifier. This is passed with query results and to friction and restitution
     /// combining functions. It is not used internally.
     /// </summary>
-    public int UserMaterialId;
+    public ulong UserMaterialId;
 
     /// <summary>
     /// Custom debug draw color.

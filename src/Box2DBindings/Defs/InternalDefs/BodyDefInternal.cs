@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 namespace Box2D;
 
 //! \internal
-[StructLayout(LayoutKind.Sequential)] // The alternative to LayoutKind.Explicit is to have two padding bytes between AllowFastRotation and internalValue
+[StructLayout(LayoutKind.Sequential)]
 struct BodyDefInternal
 {
 #if NET9_0_OR_GREATER
@@ -42,11 +42,11 @@ struct BodyDefInternal
 	
     internal nint UserData;
 
+    internal MotionLocks MotionLocks;
+
     internal byte EnableSleep;
 
     internal byte IsAwake;
-
-    internal byte FixedRotation;
 
     internal byte IsBullet;
 
