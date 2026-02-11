@@ -1,6 +1,10 @@
 # Box2D-dotnet-bindings
 Box2D 3.x Bindings for dotnet (C#, F#, VB, ...)
 
+> ! ATTENTION !
+>
+> This is not an original project. This repository is just a modified version for my personal use.
+
 [Doxygen documentation](https://hughph.github.io/Box2D-dotnet-bindings/namespaceBox2D.html)
 
 ### The NuGet package includes native binaries for:
